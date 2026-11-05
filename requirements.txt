@@ -1,0 +1,41 @@
+# Core
+torch>=2.1.0
+numpy>=1.26.4
+
+# Transformers stack
+# Pin to a version that provides HybridCache and matches ecosystem packages
+transformers>=4.44.2,<5
+sentence-transformers>=3.0.1
+peft>=0.11.1
+accelerate>=0.33.0
+trl>=0.8.6
+# Keep tokenizers in sync with transformers (>=0.19 recommended for 4.44+)
+tokenizers>=0.22.0,<0.24
+sentencepiece>=0.1.99
+safetensors>=0.4.3
+huggingface_hub>=0.23.0
+
+# Retrieval
+faiss-cpu>=1.8.0
+rank-bm25>=0.2.2
+
+# LangChain ecosystem
+langchain>=0.2.12
+langchain-community>=0.2.10
+langchain-text-splitters>=0.2.2
+langchain-ollama>=0.1.0
+pydantic>=2.6.0  # đảm bảo tương thích LC 0.2
+
+# Evaluation & utils
+evaluate>=0.4.2
+scikit-learn>=1.4.2
+ragas>=0.1.14        # optional nhưng nên có cho RAG metrics
+datasets>=2.20.0
+requests>=2.32.0
+tqdm>=4.66.4
+python-dotenv>=1.0.1
+aiohttp>=3.9.5
+
+# Backend API (phục vụ chatbot)
+fastapi>=0.111.0
+uvicorn>=0.30.0
